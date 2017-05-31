@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.jack.readlog.activity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue">
+
+        <Button
+            android:id="@+id/btn_main_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="设置"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/lv_main_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+
+        <TextView
+            android:id="@+id/tv_main_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="请读取数据"
+            android:textSize="@dimen/text_size_large"/>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="输出目录："
+            android:textSize="@dimen/text_size_normal"/>
+
+        <TextView
+            android:id="@+id/tv_main_destDir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp"
+            android:textSize="@dimen/text_size_normal"
+            tools:text="/scard/output"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_main_read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="读取数据"
+        android:textSize="@dimen/text_size_normal"/>
+
+</LinearLayout>
